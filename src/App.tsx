@@ -34,16 +34,14 @@ function Root() {
     return (
         <PageWrapper>
             <Header/>
-            <Container>
-                <Nav/>
-
+            <Nav/>
                 <Routes>
-                    <Route path={`/`}
-                           element={<Home/>}
-                    />
+                    <Route path={`/public`}
+                           element={<Home/>}>
+                    </Route>
                     <Route path={`/work`}
-                           element={<Work/>}
-                    />
+                           element={<Work/>}>
+                    </Route>
 
                     <Route path="/projects"
                            element={<Projects/>}
@@ -61,6 +59,8 @@ function Root() {
                            element={<Music/>}
                     />
                 </Routes>
+            <Container>
+
             </Container>
             <Footer/>
 

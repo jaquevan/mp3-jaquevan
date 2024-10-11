@@ -13,21 +13,15 @@ const StyledHeader = styled.header`
     }
 `;
 
-function Header() {
+export default function Header() {
     return (
         <>
             <StyledHeader>
-                <header>
-                <div id="header">
                     <h1>Evan Jaquez</h1>
                     <h3>Welcome to my inner vortex :D</h3>
-                </div>
-                </header>
             </StyledHeader>
 
 
         </>
     );
 }
-
-export default Header;

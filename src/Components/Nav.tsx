@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom"
 
+
+const StyledLink = styled(Link)`
+text-decoration: none;
+color: white;
+font-size: calc(2px + 1vw),
+`
+
 const StyledNav = styled.nav`
     background-color: lawngreen;
     
@@ -43,16 +50,14 @@ export default function Nav() {
     return (
         <>
             <StyledNav>
-            <nav>
                 <ul>
-                        <Link to={`/public`}>Home</Link>
-                        <Link to={`/education`}>Education</Link>
-                        <Link to={`/work`}>Employment</Link>
-                        <Link to={`/projects`}>Projects</Link>
-                        <Link to={`/achievements`}>Achievements</Link>
-                        <Link to={`/music`}>Music</Link>
+                    <StyledLink to={`/`}>Home</StyledLink>
+                    <StyledLink to={`/education`}>Education</StyledLink>
+                    <StyledLink to={`/work`}>Work</StyledLink>
+                    <StyledLink to={`/projects`}>Projects</StyledLink>
+                    <StyledLink to={`/achievements`}>Achievements</StyledLink>
+                    <StyledLink to={`/music`}>Music</StyledLink>
                 </ul>
-            </nav>
         </StyledNav>
         </>
     )
