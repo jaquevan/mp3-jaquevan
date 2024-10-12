@@ -3,60 +3,81 @@ import { Link } from "react-router-dom"
 
 
 const StyledLink = styled(Link)`
-text-decoration: none;
-color: white;
-font-size: calc(2px + 1vw),
+    text-decoration: none;
+    color: white;
+    font-size: calc(4px + 1.5vw);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;,
 `
 
 const StyledNav = styled.nav`
-    background-color: lawngreen;
+    border: 4px dotted greenyellow;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 2%;
+    box-sizing: border-box;
+    
     
 
     ul {
         list-style-type: none;
         display: flex;
         flex-direction: column;
+        padding: 0;
+        width: 100%;
+        align-items: center;
         
+    }
+    li :hover {
+        border: 5px dotted black;
+        color: black;
+    }
+    ul :hover {
     }
 
     li {
-        padding: 1% 15%;
-        border: 3px solid lawngreen;
         border-radius: 5px;
         margin-bottom: 5vh;
+        
     }
 
     @media screen and (max-width: 750px) {
+        width: 100%;
+        height: auto;
         flex-direction: row;
-        nav {
-            width: 100%;
 
+         ul {
+
+             flex-direction: row;
+             justify-content: space-around;
+             padding: 1%;
+             width: 100%;
+             text-align: center;
         }
 
-        nav ul {
-            list-style-type: none;
-            flex-direction: row;
-            width: 100%;
-            text-align: center;
-        }
-
-        nav li {
-            padding: 0 15%;
+         li {
+             margin: 1%;
+             padding: .2% 3%;
+             
         }
     }
 
-`
+`;
 export default function Nav() {
     return (
         <>
             <StyledNav>
                 <ul>
-                    <StyledLink to={`/`}>Home</StyledLink>
-                    <StyledLink to={`/education`}>Education</StyledLink>
-                    <StyledLink to={`/work`}>Work</StyledLink>
-                    <StyledLink to={`/projects`}>Projects</StyledLink>
-                    <StyledLink to={`/achievements`}>Achievements</StyledLink>
-                    <StyledLink to={`/music`}>Music</StyledLink>
+                    <li><StyledLink to={`/`}>Home</StyledLink></li>
+                    <li><StyledLink to={`/education`}>Education</StyledLink></li>
+                    <li><StyledLink to={`/work`}>Work</StyledLink></li>
+                    <li><StyledLink to={`/projects`}>Projects</StyledLink></li>
+                    <li><StyledLink to={`/achievements`}>Achievements</StyledLink></li>
+                    <li><StyledLink to={`/music`}>Music</StyledLink></li>
                 </ul>
         </StyledNav>
         </>
