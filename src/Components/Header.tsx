@@ -3,15 +3,20 @@ import styled from "styled-components";
 const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
-    color: yellow;
-    
-    border: 3px solid white;
-    border-radius: 5px;
-    
-    padding-bottom: 1%;
-    margin: 0 auto;
     text-align: left;
     width: 100%;
+    
+    //found how to change the text to look rised for more readable fun colors
+    //in the documentation for text sahdow
+    color: sandybrown;
+    text-shadow: -1px 2px 0 black;
+    
+    
+    border: 3px solid black;
+    border-radius: 5px;
+    padding-bottom: 1%;
+    margin: 1% auto;
+    
 
     @media screen and (max-width: 750px) {
         text-align: center;

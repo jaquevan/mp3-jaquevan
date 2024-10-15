@@ -6,8 +6,11 @@ const StyledLink = styled(Link)`
     text-decoration: none;
     color: white;
     font-size: calc(4px + 1.5vw);
+    font-family: Calibri, Arial, sans-serif;
+    
     align-items: center;
     justify-content: center;
+    
     width: 100%;
     height: 100%;,
 `
@@ -18,7 +21,8 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1% 2%;
+    padding: 0;
+    margin-bottom: 1.5%;
     box-sizing: border-box;
     
     
@@ -34,9 +38,9 @@ const StyledNav = styled.nav`
     }
     li :hover {
         border: 5px dotted black;
+        padding: 4%;
         color: black;
-    }
-    ul :hover {
+        transform: scale(1.1);
     }
 
     li {

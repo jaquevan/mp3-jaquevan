@@ -1,8 +1,19 @@
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-
+font-size: calc(4px + 1.5vw);
+padding-left: 2.5%;
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+h2 {
+    text-align: center;
+    color: darkgreen;
+    margin: 1% 0;
+}
 `
+
 export default function Education() {
 
     return(
@@ -24,7 +35,7 @@ export default function Education() {
                                     <li><h3>Film Lovers and Philosophers  Club</h3></li>
                                 </ul>
 
-                <h2>Notable Coursework</h2>
+            <h2>Notable Coursework</h2>
                 <ul>
                     <li><h3>CS111/CS112 - Intro to Computer Science I, II</h3></li>
                     <li><h3>CS131 - Combinatoric Structures </h3></li>
@@ -36,7 +47,7 @@ export default function Education() {
                     <li><h3>DS219 - Software Engineering Career Prep </h3></li>
                     <li><h3>EC102/202 - Intro/Intermediate Macroeconomics </h3></li>
                 </ul>
-
+            <br/>
         </StyledDiv>
     );
 }
