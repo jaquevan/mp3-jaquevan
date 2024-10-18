@@ -4,7 +4,6 @@ const StyledHome = styled.div`
     padding: 0 2%;
     text-align: center;
     font-size: calc(2px + 1.5vw);
-    height: 100%;
     border: 4px solid black;
 
     h1 {
@@ -22,6 +21,7 @@ const StyledHome = styled.div`
 
     @media screen and (max-width: 750px) {
         font-size: 14px;
+        height: 70vh;
     }
 
 `

@@ -23,6 +23,7 @@ const StyledNav = styled.nav`
     align-items: center;
     padding: 1% 4%;
     box-sizing: border-box;
+    height: auto;
 
 
     background-color: black;
@@ -47,6 +48,7 @@ const StyledNav = styled.nav`
 
     li {
         border-radius: 10px;
+        margin: 15% 0;
         padding: 3vh; //here i use vh to adjust to content amount and screen size for left side nav 
     }
 
