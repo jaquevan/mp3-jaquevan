@@ -4,12 +4,13 @@ const StyledHome = styled.div`
     padding: 0 2%;
     text-align: center;
     font-size: calc(2px + 1.5vw);
-    height: 100%; 
+    height: 100%;
     border: 4px solid black;
 
     h1 {
         color: black;
     }
+
     img {
         display: block;
         max-width: 45vw;
@@ -22,10 +23,10 @@ const StyledHome = styled.div`
     @media screen and (max-width: 750px) {
         font-size: 14px;
     }
-        
+
 `
 
-export default function Home (){
+export default function Home() {
     return (
         <StyledHome>
             <h1>About Me</h1>

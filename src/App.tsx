@@ -28,9 +28,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     //makes the main go bellow the nav
-    @media screen and (max-width: 750px){
-            flex-direction: column;
-        }
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+    }
 
 `;
 
@@ -39,7 +39,7 @@ function Root() {
         <PageWrapper>
             <Header/>
             <Container>
-            <Nav/>
+                <Nav/>
                 <Routes>
 
                     <Route path={`/`}
@@ -48,14 +48,14 @@ function Root() {
                     <Route path={`/work`}
                            element={<Work/>}
                     />
-                    <Route path="/projects"
+                    <Route path={`/projects`}
                            element={<Projects/>}
                     />
 
-                    <Route path="/education"
+                    <Route path={`/education`}
                            element={<Education/>}
                     />
-                    <Route path="/achievements"
+                    <Route path={`/achievements`}
                            element={<Achievements/>}
                     />
                     <Route path={'/music'}
@@ -84,9 +84,7 @@ const router = createBrowserRouter(
 export default function App() {
     return (
         <>
-
             <RouterProvider router={router}/>
-
         </>
     );
 }

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import Calculator from "./Calculator.tsx";
 
 const StyledText = styled.div`
-    border: 2px solid  yellow;
+    border: 2px solid yellow;
     border-radius: 5px;
     background-color: black;
     padding: 1%;
@@ -13,22 +13,22 @@ const StyledText = styled.div`
     align-items: center;
     text-align: center;
     
-    font-size: calc(2px + 1vw);
-    
-    h4{
+    h4 {
         padding: 1%;
         background-color: dimgrey;
-
+        font-size: calc(3px + 1.5vh);
     }
 `
 const StyledDiv = styled.div`
-
+    font-size: calc(4px + 1.5vw);
     color: white;
     text-align: center;
     display: inline-block;
     border: 4px solid black;
 
-    
+    h1{
+        color: black;
+    }
     .github img {
         border-radius: 100px;
         border: 5px solid seagreen;
@@ -36,13 +36,14 @@ const StyledDiv = styled.div`
         width: auto;
         align-items: center;
         filter: brightness(90%);
-        
+        margin-top: 2%;
+
     }
 
     .github img:hover {
         border: 6px solid yellow;
         filter: brightness(110%);
-        }
+    }
 
     button {
         border: 4px solid yellow;
@@ -52,12 +53,11 @@ const StyledDiv = styled.div`
 
     button:hover {
         background-color: darkslateblue;
-        transform: scale(1.1);
     }
 
 
     button:hover a {
-        background-color: darkslateblue; 
+        background-color: darkslateblue;
         color: white;
     }
 
@@ -71,22 +71,23 @@ const StyledDiv = styled.div`
         font-size: 14px;
         margin: auto;
         padding: 10px;
-        
+
         .github img {
             height: 25vh;
         }
-        
+
     }
 `
 
 
-
-export default function Projects (){
+export default function Projects() {
 
     return (
         <StyledDiv>
+            <h1>Projects</h1>
+
             <div className={"github"}>
-            <img src="./public/images/pfp.png" alt="Github Profile"/>
+                <img src="./public/images/pfp.png" alt="Github Profile"/>
             </div>
             <br/>
 
@@ -99,9 +100,10 @@ export default function Projects (){
 
             <br/><br/>
             <StyledText>
-            <h4> Welcome to my projects page! Although uninhabited by fun interesting projects,
-                I hope to fill it up with things I find interesting and can be proud of. Here you can find a link to
-                my github profile, a simple JS calculator, and descriptions of projects.</h4>
+                <h4> Welcome to my projects page! Although uninhabited by fun interesting projects,
+                    I hope to fill it up with things I find interesting and can be proud of. Here you can find a link to
+                    my github profile, a simple JS calculator, and descriptions of projects.
+                </h4>
             </StyledText>
             <br/><br/>
             <Calculator/>

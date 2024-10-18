@@ -1,25 +1,18 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 const StyledLink = styled(Link)`
     color: white;
-    text-decoration: none;
-    
     background: black;
-    padding:0;
-    margin-right: 1%;
-    
+    text-decoration: none;
+    padding: 1%;
+    margin: auto;
     font-size: calc(4px + 1.5vw);
-    font-family: Calibri, Arial, sans-serif;
-    
-    align-items: center;
-    justify-content: center;
-    
-    width: auto;
-    height: 100%;,
+    font-family: monospace, Arial, sans-serif;
 
-    
+
+
 `
 
 const StyledNav = styled.nav`
@@ -30,11 +23,10 @@ const StyledNav = styled.nav`
     align-items: center;
     padding: 1% 4%;
     box-sizing: border-box;
-    
-    
+
+
     background-color: black;
-    
-    
+
 
     ul {
         list-style-type: none;
@@ -45,18 +37,17 @@ const StyledNav = styled.nav`
         align-items: center;
         background-color: black;
         margin: auto 0;
-        
+
     }
+
     li :hover {
         background-color: yellow;
-        border: 3px ridge lawngreen;
         color: midnightblue;
-        transform: scale(1.02);
     }
 
     li {
-        border-radius: 5px;
-        margin-bottom: 5vh;
+        border-radius: 10px;
+        padding: 3vh; //here i use vh to adjust to content amount and screen size for left side nav 
     }
 
     @media screen and (max-width: 750px) {
@@ -65,19 +56,19 @@ const StyledNav = styled.nav`
         flex-direction: row;
         margin-bottom: 1%;
 
-         ul {
+        ul {
 
-             flex-direction: row;
-             justify-content: space-around;
-             padding: 1%;
-             width: 100%;
-             text-align: center;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 1%;
+            width: 100%;
+            text-align: center;
         }
 
-         li {
-             margin: 1%;
-             padding: .2% 3%;
-             
+        li {
+            margin: 1%;
+            padding: 0 ;
+
         }
     }
 
@@ -94,7 +85,7 @@ export default function Nav() {
                     <li><StyledLink to={`/achievements`}>Achievements</StyledLink></li>
                     <li><StyledLink to={`/music`}>Music</StyledLink></li>
                 </ul>
-        </StyledNav>
+            </StyledNav>
         </>
     )
 }

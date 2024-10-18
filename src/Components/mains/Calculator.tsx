@@ -1,26 +1,26 @@
-import  { useState } from "react";
+import {useState} from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
     color: white;
-    background: darkblue;
+    background: url("/public/images/clip-lightning-gif-background-15.gif");
     border-radius: 15px;
     font-size: calc(2px + 1vh);
     padding: 1% 0;
-    
-    
+
+
     h1 {
         color: black;
         background: yellow;
         border-radius: 15px 15px 0 0;
     }
-    
-    .vegeta img{
+
+    .vegeta img {
         height: 30vh;
-        border:none;
+        border: none;
     }
 
-    label, input{
+    label, input {
         display: block;
         margin: 2% auto;
         padding: 1%;
@@ -28,30 +28,33 @@ const StyledDiv = styled.div`
         border-radius: 5%;
         background-color: lightskyblue;
     }
-    button{
-        background:lightskyblue;
+
+    button {
+        background: lightskyblue;
         font-family: "Agave Nerd Font", Arial, sans-serif;
         margin: 1.5%;
         padding: 3% 2%;
         border: 2px solid yellow;
         border-radius: 8px;
     }
-    button:hover{
+
+    button:hover {
         color: white;
         background-color: darkslateblue;
     }
 
     @media screen and (max-width: 750px) {
         width: 90vw;
-        
-        button{
+
+        button {
             margin: 1.5%;
             padding: 2% 1.7%;
         }
-        label, input{
-            display:flex;
+
+        label, input {
+            display: flex;
             margin: 5% 35%;
-            
+
         }
     }
 
@@ -61,14 +64,14 @@ const StyledDiv = styled.div`
         padding: 10px;
 
         label, input {
-            display:block;
+            display: block;
             padding: 10px;
             margin: 2% auto;
         }
     }
 `;
 
-function Calculator(){
+function Calculator() {
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
     const [result, setResult] = useState("");
@@ -79,7 +82,7 @@ function Calculator(){
         return (
             <div className={"calcResult"}>
                 {Number(result) < 0 ? (
-                    <h3 style={{ color: 'red' }}>{result}</h3>
+                    <h3 style={{color: 'red'}}>{result}</h3>
                 ) : (
                     <h3>{result}</h3>
                 )}
@@ -90,35 +93,35 @@ function Calculator(){
     function getInputs(): { firstValue: number; secondValue: number } {
         const firstValue = Number(first);
         const secondValue = Number(second);
-        return { firstValue, secondValue };
+        return {firstValue, secondValue};
     }
 
     function myAdd(): void {
-        const { firstValue, secondValue } = getInputs();
+        const {firstValue, secondValue} = getInputs();
         const result = (firstValue + secondValue);
         displayResult(result);
     }
 
     function mySub(): void {
-        const { firstValue, secondValue } = getInputs();
+        const {firstValue, secondValue} = getInputs();
         const result = firstValue - secondValue;
         displayResult(result);
     }
 
     function myMultiply(): void {
-        const { firstValue, secondValue } = getInputs();
+        const {firstValue, secondValue} = getInputs();
         const result = firstValue * secondValue;
         displayResult(result);
     }
 
     function myDivide(): void {
-        const { firstValue, secondValue } = getInputs();
+        const {firstValue, secondValue} = getInputs();
         const result = firstValue / secondValue;
         displayResult(result);
     }
 
     function myPow(): void {
-        const { firstValue, secondValue } = getInputs();
+        const {firstValue, secondValue} = getInputs();
         let result = 1;
 
         for (let i = 0; i < secondValue; i++) {
@@ -138,7 +141,7 @@ function Calculator(){
 
             <h1>Vegeta's React Calculator</h1>
             <div className={"vegeta"}>
-            <img src="/public/images/vegeta_ssj_blue_2_transparent_by_ggreuz_dayf7hr-fullview.png" alt="Vegeta" />
+                <img src="/public/images/vegeta_ssj_blue_2_transparent_by_ggreuz_dayf7hr-fullview.png" alt="Vegeta"/>
             </div>
             <input
                 id="first"

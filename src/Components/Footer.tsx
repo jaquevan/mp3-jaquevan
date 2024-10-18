@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 const StyledFooter = styled.footer`
-    background-color: powderblue;
+    background-color: darkseagreen;
     color: black;
     font-size: calc(4px + 1.5vw);
     padding: 1%;
@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    background-color: powderblue;
+    background-color: darkseagreen;
     justify-content: center;
     width: 100%;
 
