@@ -11,8 +11,9 @@ const StyledText = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
+    
+    font-size: calc(2px + 1vw);
     
     h4{
         padding: 1%;
@@ -21,23 +22,24 @@ const StyledText = styled.div`
     }
 `
 const StyledDiv = styled.div`
-    width: 95%;
+
     color: white;
     text-align: center;
     display: inline-block;
-    
+    border: 4px solid black;
 
     
-    img {
+    .github img {
         border-radius: 100px;
         border: 5px solid seagreen;
-        height: 25vh;
+        height: 35vh;
+        width: auto;
         align-items: center;
         filter: brightness(90%);
         
     }
 
-    img:hover {
+    .github img:hover {
         border: 6px solid yellow;
         filter: brightness(110%);
         }
@@ -64,7 +66,18 @@ const StyledDiv = styled.div`
         color: black;
         display: inline-block;
     }
-`;
+
+    @media screen and (max-width: 750px) {
+        font-size: 14px;
+        margin: auto;
+        padding: 10px;
+        
+        .github img {
+            height: 25vh;
+        }
+        
+    }
+`
 
 
 
@@ -72,9 +85,9 @@ export default function Projects (){
 
     return (
         <StyledDiv>
-
+            <div className={"github"}>
             <img src="./public/images/pfp.png" alt="Github Profile"/>
-
+            </div>
             <br/>
 
             <button>

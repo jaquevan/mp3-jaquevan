@@ -7,15 +7,23 @@ const StyledDiv = styled.div`
     border-radius: 15px;
     font-size: calc(2px + 1vh);
     padding: 1% 0;
+    
+    
     h1 {
         color: black;
         background: yellow;
         border-radius: 15px 15px 0 0;
     }
+    
+    .vegeta img{
+        height: 30vh;
+        border:none;
+    }
+
     label, input{
-        display: flex;
-        flex-direction: row;
-        padding: 2%;
+        display: block;
+        margin: 2% auto;
+        padding: 1%;
         border: 3px solid yellow;
         border-radius: 5%;
         background-color: lightskyblue;
@@ -44,6 +52,18 @@ const StyledDiv = styled.div`
             display:flex;
             margin: 5% 35%;
             
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        width: 95%;
+        margin: auto;
+        padding: 10px;
+
+        label, input {
+            display:block;
+            padding: 10px;
+            margin: 2% auto;
         }
     }
 `;
@@ -117,7 +137,9 @@ function Calculator(){
         <StyledDiv>
 
             <h1>Vegeta's React Calculator</h1>
-
+            <div className={"vegeta"}>
+            <img src="/public/images/vegeta_ssj_blue_2_transparent_by_ggreuz_dayf7hr-fullview.png" alt="Vegeta" />
+            </div>
             <input
                 id="first"
                 type="number"
