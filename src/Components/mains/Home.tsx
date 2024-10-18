@@ -3,9 +3,12 @@ import styled from "styled-components";
 const StyledHome = styled.div`
     padding: 0 2%;
     text-align: center;
+    font-size: calc(2px + 1.5vw);
+    height: 100%; 
+    border: 4px solid black;
 
     h1 {
-        color: seagreen;
+        color: black;
     }
     img {
         display: block;
@@ -14,6 +17,10 @@ const StyledHome = styled.div`
         margin: 5% auto;
         border-radius: 10%;
         border: 7px groove limegreen;
+    }
+
+    @media screen and (max-width: 750px) {
+        font-size: 14px;
     }
         
 `

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-font-size: calc(4px + 1.5vw);
+font-size: calc(1px + 1.5vw);
 padding-left: 2.5%;
     h1 {
         text-align: center;

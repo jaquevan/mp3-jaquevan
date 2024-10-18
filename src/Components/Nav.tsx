@@ -3,27 +3,36 @@ import { Link } from "react-router-dom"
 
 
 const StyledLink = styled(Link)`
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    
+    background: black;
+    padding:0;
+    margin-right: 1%;
+    
     font-size: calc(4px + 1.5vw);
     font-family: Calibri, Arial, sans-serif;
     
     align-items: center;
     justify-content: center;
     
-    width: 100%;
+    width: auto;
     height: 100%;,
+
+    
 `
 
 const StyledNav = styled.nav`
-    border: 4px dotted greenyellow;
+    border: 6px ridge greenyellow;
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    margin-bottom: 1.5%;
+    padding: 1% 4%;
     box-sizing: border-box;
+    
+    
+    background-color: black;
     
     
 
@@ -31,28 +40,30 @@ const StyledNav = styled.nav`
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        padding: 0;
         width: 100%;
+        height: auto;
         align-items: center;
+        background-color: black;
+        margin: auto 0;
         
     }
     li :hover {
-        border: 5px dotted black;
-        padding: 4%;
-        color: black;
-        transform: scale(1.1);
+        background-color: yellow;
+        border: 3px ridge lawngreen;
+        color: midnightblue;
+        transform: scale(1.02);
     }
 
     li {
         border-radius: 5px;
         margin-bottom: 5vh;
-        
     }
 
     @media screen and (max-width: 750px) {
         width: 100%;
         height: auto;
         flex-direction: row;
+        margin-bottom: 1%;
 
          ul {
 
