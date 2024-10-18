@@ -8,7 +8,12 @@ const StyledDiv = styled.div`
     font-size: calc(4px + 1.5vw);
 
     text-align: center;
-
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    
     img {
         height: 30vh;
         margin: 0;
@@ -24,15 +29,13 @@ const StyledDiv = styled.div`
 export default function Music() {
     return (
         <StyledDiv>
-            <h1>
-                Here are some photos of me with my bass drum.
-            </h1>
-            <img alt="picture of me at band camp in 2024" src="../../public/images/soloshot.png"/>
-            <h4>picture of me at band camp this past summer wearing my minion t-shirt</h4>
-            <img alt="friends and family performance 2023" src="../../public/images/drumline2023.png"/>
-            <h4>my team!</h4>
-            <img alt="bassline band camp 2024" src="../../public/images/bassline.png"/>
-            <h4>my dudes!</h4>
+            <h1>Drumline</h1>
+            <img alt="picture of me at band camp in 2024" src="/public/images/bassline.png"/>
+            <h4>bass drums</h4>
+            <img alt="friends and family performance 2023" src="/public/images/drumline2023.png"/>
+            <h4>team</h4>
+            <img alt="bassline band camp 2024" src="/public/images/soloshot.png"/>
+            <h4>solo shot</h4>
         </StyledDiv>
     );
 }

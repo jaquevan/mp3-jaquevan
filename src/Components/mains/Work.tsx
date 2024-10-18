@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-    font-size: calc(1px + 1.4vw);
+    font-size: calc(4px + 1.4vw);
     padding-left: 2.5%;
     padding-bottom: 2.5%;
     border: 4px solid black;

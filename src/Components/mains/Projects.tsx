@@ -16,7 +16,6 @@ const StyledText = styled.div`
     h4 {
         padding: 1%;
         background-color: dimgrey;
-        font-size: calc(3px + 1.5vh);
     }
 `
 const StyledDiv = styled.div`
@@ -26,7 +25,9 @@ const StyledDiv = styled.div`
     display: inline-block;
     border: 4px solid black;
 
-    h1{
+    h1 {
+        text-align: center;
+        margin-bottom: 1%;
         color: black;
     }
     .github img {
@@ -87,7 +88,7 @@ export default function Projects() {
             <h1>Projects</h1>
 
             <div className={"github"}>
-                <img src="./public/images/pfp.png" alt="Github Profile"/>
+                <img src="/public/images/pfp.png" alt="Github Profile"/>
             </div>
             <br/>
 

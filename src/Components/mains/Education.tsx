@@ -6,7 +6,7 @@ const StyledDiv = styled.div`
     border: 4px solid black;
     h1 {
         text-align: center;
-        margin-bottom: 1%;
+        margin-bottom: 1%;  
     }
 
     h2 {
