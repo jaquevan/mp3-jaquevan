@@ -8,6 +8,7 @@ import Education from './Components/mains/Education.tsx';
 import Achievements from './Components/mains/Achievements.tsx';
 import Credits from './Components/mains/Credits.tsx';
 
+
 import Nav from "./Components/Nav.tsx";
 import Header from "./Components/Header.tsx";
 import Footer from "./Components/Footer.tsx";

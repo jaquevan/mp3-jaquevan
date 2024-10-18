@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+const StyledLogo = styled.div`
+    display: block;
+    width: 75px;  
+    height: 75px; 
+    border: 3px solid black;
+    border-radius: 50%;
+    margin-top: 1%;
+    background-color: lavender;
+    
+
+    img {
+        width: 100%; 
+        height: auto;
+        padding: 5%;
+    }
+
+    @media screen and (max-width: 750px) {
+        width: 65px;
+        height: 66px;
+        margin: 1% auto;
+        img {
+            width: 100%;
+        }
+    }
+`;
+
+
 const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
@@ -25,24 +52,11 @@ const StyledHeader = styled.header`
     padding-bottom: 1%;
     margin: 2% auto;
 
-    img {
-        position: absolute;
-        width: 18%; 
-        max-width: 60px; /* Limit the max width */
-        left: 85%; /* Position it relative to the header */
-        top: 5.5%;
-        z-index: 1;
-    }
+
 
     @media screen and (max-width: 750px) {
         text-align: center;
-        img {
-            width: 15%; /* Smaller width for smaller screens */
-            max-width: 50px;
-            left: 80%;
-            top: 4%;
-            
-        }
+        
     }
 `;
 
@@ -50,7 +64,9 @@ export default function Header() {
     return (
         <>
             <StyledHeader>
-                <img src=".//images/Classic_dart_monkey.webp" alt="Monkey"/>
+                <StyledLogo>
+                    <img src=".//images/Classic_dart_monkey.webp" alt="Monkey"/>
+                </StyledLogo>
 
                 <h1>Evan Jaquez</h1>
                 <h3>Welcome to My Inner Vortex</h3>

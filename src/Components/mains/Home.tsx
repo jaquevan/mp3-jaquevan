@@ -6,8 +6,14 @@ const StyledHome = styled.div`
     font-size: calc(2px + 1.5vw);
     border: 4px solid black;
 
-    h1 {
-        color: black;
+    
+    h1, h2 { 
+        color: rebeccapurple;
+        text-underline: black;
+    }
+    
+    p{
+        padding-bottom: 5%;
     }
 
     img {
@@ -21,7 +27,6 @@ const StyledHome = styled.div`
 
     @media screen and (max-width: 750px) {
         font-size: 14px;
-        height: 70vh;
     }
 
 `
@@ -36,6 +41,9 @@ export default function Home() {
                 Economics
                 with a minor in Data Science. I wish to pursue a career path in front-end development and am taking
                 Web & App Development and Software Engineering courses this semester to learn more about the field.</p>
+
+
+            <h2> Thank you for visiting my website :D </h2>
         </StyledHome>
 
 

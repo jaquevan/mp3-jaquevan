@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 import Calculator from "./Calculator.tsx";
 
+
 const StyledText = styled.div`
     border: 2px solid yellow;
     border-radius: 5px;

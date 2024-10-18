@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
     color: black;
-    border: 4px solid black;
-    display: flex;
-    flex-direction: row;
     font-size: calc(4px + 1.5vw);
-
     text-align: center;
+    display: inline-block;
+    border: 4px solid black;
+    width: 100vw;
     
     h1 {
         text-align: center;
@@ -15,7 +14,8 @@ const StyledDiv = styled.div`
     }
     
     img {
-        height: 30vh;
+        width: auto;
+        height: 20vw;
         margin: 0;
         padding: 10px;
     }
@@ -23,6 +23,7 @@ const StyledDiv = styled.div`
     @media screen and (max-width: 750px) {
         display: block;
         align-content: center;
+        width: 100%;
     }
 `
 

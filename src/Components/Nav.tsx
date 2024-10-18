@@ -11,8 +11,6 @@ const StyledLink = styled(Link)`
     font-size: calc(4px + 1.5vw);
     font-family: monospace, Arial, sans-serif;
 
-
-
 `
 
 const StyledNav = styled.nav`
@@ -24,10 +22,7 @@ const StyledNav = styled.nav`
     padding: 1% 4%;
     box-sizing: border-box;
     height: auto;
-
-
     background-color: black;
-
 
     ul {
         list-style-type: none;
