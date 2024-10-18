@@ -30,7 +30,7 @@ export default function Home() {
     return (
         <StyledHome>
             <h1>About Me</h1>
-            <img alt="Picture of Me" src="/public/images/wdl.png"/>
+            <img src=".//images/wdl.png" alt="Picture of Me"/>
 
             <p>My name is <b>Evan Jaquez</b>, and I am a junior at <b>Boston University</b> studying Computer Science &
                 Economics
