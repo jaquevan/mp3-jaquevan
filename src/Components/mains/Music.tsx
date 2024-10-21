@@ -31,11 +31,11 @@ export default function Music() {
     return (
         <StyledDiv>
             <h1>Drumline</h1>
-            <img alt="picture of me at band camp in 2024" src="/public/images/bassline.png"/>
+            <img alt="picture of me at band camp in 2024" src=".//images/bassline.png"/>
             <h4>bass drums</h4>
-            <img alt="friends and family performance 2023" src="/public/images/drumline2023.png"/>
+            <img alt="friends and family performance 2023" src=".//images/drumline2023.png"/>
             <h4>team</h4>
-            <img alt="bassline band camp 2024" src="/public/images/soloshot.png"/>
+            <img alt="bassline band camp 2024" src=".//images/soloshot.png"/>
             <h4>solo shot</h4>
         </StyledDiv>
     );

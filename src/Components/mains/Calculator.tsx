@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
     color: white;
-    background: url("/public/images/clip-lightning-gif-background-15.gif");
+    background: url(".//images/clip-lightning-gif-background-15.gif");
     border-radius: 15px;
     font-size: calc(2px + 1vh);
     padding: 1% 0;
@@ -141,7 +141,7 @@ function Calculator() {
 
             <h1>Vegeta's React Calculator</h1>
             <div className={"vegeta"}>
-                <img src="/public/images/vegeta_ssj_blue_2_transparent_by_ggreuz_dayf7hr-fullview.png" alt="Vegeta"/>
+                <img src=".//images/vegeta_ssj_blue_2_transparent_by_ggreuz_dayf7hr-fullview.png" alt="Vegeta"/>
             </div>
             <input
                 id="first"

@@ -89,7 +89,7 @@ export default function Projects() {
             <h1>Projects</h1>
 
             <div className={"github"}>
-                <img src="/public/images/pfp.png" alt="Github Profile"/>
+                <img src=".//images/pfp.png" alt="Github Profile"/>
             </div>
             <br/>
 
