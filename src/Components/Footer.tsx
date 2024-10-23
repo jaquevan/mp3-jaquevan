@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const StyledFooter = styled.footer`
     background-color: black;
-    color: darkgreen;
+    color: limegreen;
     font-size: calc(4px + 1.5vw);
     margin: 1.5% 0;
     padding: 1%;

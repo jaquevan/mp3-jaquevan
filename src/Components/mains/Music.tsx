@@ -31,12 +31,13 @@ export default function Music() {
     return (
         <StyledDiv>
             <h1>Drumline</h1>
+            <p>I am in the BU Drumline</p>
             <img alt="picture of me at band camp in 2024" src=".//images/bassline.png"/>
-            <h4>bass drums</h4>
+            <h4>The Bass Drum Section</h4>
             <img alt="friends and family performance 2023" src=".//images/drumline2023.png"/>
-            <h4>team</h4>
+            <h4>team from last year</h4>
             <img alt="bassline band camp 2024" src=".//images/soloshot.png"/>
-            <h4>solo shot</h4>
+            <h4>solo shot in my minions tee</h4>
         </StyledDiv>
     );
 }

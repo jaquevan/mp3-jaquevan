@@ -1,6 +1,12 @@
 import {useState} from "react";
 import styled from "styled-components";
 
+
+const StyledResult = styled.h3`
+    font-size: 20px;
+    font-family: Monospace, Arial, sans-serif;
+`;
+
 const StyledDiv = styled.div`
     color: white;
     background: url(".//images/clip-lightning-gif-background-15.gif");
@@ -27,6 +33,10 @@ const StyledDiv = styled.div`
         border: 3px solid yellow;
         border-radius: 5%;
         background-color: lightskyblue;
+    }
+    
+    output {
+        font-size: 20px;
     }
 
     button {
@@ -71,100 +81,91 @@ const StyledDiv = styled.div`
     }
 `;
 
+// create custom hook in order to reduce verbosity
+
+function useCalculator() {
+    // use useState
+    const [result, setResult] = useState("");
+
+    const calculate = (first: string, second: string, operator: string) => {
+        let output; //can be an int or a string
+        const firstValue = Number(first); //these must be ints
+        const secondValue = Number(second);
+
+        switch (operator) {
+            case "+":
+                output = firstValue + secondValue;
+                break;
+
+            case "-":
+                output = firstValue - secondValue;
+                break;
+
+            case "*":
+                output = firstValue * secondValue;
+                break;
+
+            case "/":
+                output = firstValue / secondValue;
+                break;
+
+            case "pow":
+                output = firstValue ** secondValue;
+                break;
+            default:
+                output = "Invalid Operation";
+        }
+
+        setResult(String(output));
+    };
+
+    const clear = () => {
+        setResult("");
+    };
+    //alows me to get shortcuts for result, calc function, and clear easily
+    return { result, calculate, clear };
+}
+
+
+
+
+
 function Calculator() {
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
-    const [result, setResult] = useState("");
 
-    function displayResult(output: number) {
-        setResult(String(output));
-
-        return (
-            <div className={"calcResult"}>
-                {Number(result) < 0 ? (
-                    <h3 style={{color: 'red'}}>{result}</h3>
-                ) : (
-                    <h3>{result}</h3>
-                )}
-            </div>
-        );
-    }
-
-    function getInputs(): { firstValue: number; secondValue: number } {
-        const firstValue = Number(first);
-        const secondValue = Number(second);
-        return {firstValue, secondValue};
-    }
-
-    function myAdd(): void {
-        const {firstValue, secondValue} = getInputs();
-        const result = (firstValue + secondValue);
-        displayResult(result);
-    }
-
-    function mySub(): void {
-        const {firstValue, secondValue} = getInputs();
-        const result = firstValue - secondValue;
-        displayResult(result);
-    }
-
-    function myMultiply(): void {
-        const {firstValue, secondValue} = getInputs();
-        const result = firstValue * secondValue;
-        displayResult(result);
-    }
-
-    function myDivide(): void {
-        const {firstValue, secondValue} = getInputs();
-        const result = firstValue / secondValue;
-        displayResult(result);
-    }
-
-    function myPow(): void {
-        const {firstValue, secondValue} = getInputs();
-        let result = 1;
-
-        for (let i = 0; i < secondValue; i++) {
-            result *= firstValue;
-        }
-        displayResult(result);
-    }
-
-    function myClear(): void {
-        setFirst("");
-        setSecond("");
-        setResult("");
-    }
+    const {result, calculate, clear} = useCalculator();
 
     return (
         <StyledDiv>
 
-            <h1>Vegeta's React Calculator</h1>
+            <h1>Vegeta's Saiyan Calculator</h1>
             <div className={"vegeta"}>
                 <img src=".//images/vegeta_ssj_blue_2_transparent_by_ggreuz_dayf7hr-fullview.png" alt="Vegeta"/>
             </div>
-            <input
-                id="first"
-                type="number"
-                value={first}
-                placeholder="First Number"
-                onChange={(e) => setFirst(e.target.value)}
+
+            <p>Enter Two Powerful Numbers for Vegeta to do Mental Math!!</p>
+            <input id="first" type="number" value={first} placeholder="First Number"
+                   onChange={(e) => setFirst(e.target.value)}
             />
-            <input
-                id="second"
-                type="number"
-                value={second}
-                placeholder="Second Number"
-                onChange={(e) => setSecond(e.target.value)}
+            <input id="second" type="number" value={second} placeholder="Second Number"
+                   onChange={(e) => setSecond(e.target.value)}
             />
 
-            <button onClick={myAdd}>+</button>
-            <button onClick={mySub}>-</button>
-            <button onClick={myMultiply}>*</button>
-            <button onClick={myDivide}>/</button>
-            <button onClick={myPow}>pow</button>
-            <button onClick={myClear}>Clear</button>
-            <div id="output">{result}</div>
+            <button onClick={() => calculate(first, second, "+")}>+</button>
+            <button onClick={() => calculate(first, second, "-")}>-</button>
+            <button onClick={() => calculate(first, second, "*")}>*</button>
+            <button onClick={() => calculate(first, second, "/")}>/</button>
+            <button onClick={() => calculate(first, second, "pow")}>pow</button>
+            <button onClick={clear}>Clear</button>
+
+            <StyledResult>
+                {result && (
+                    <h3 style={{color: Number(result) < 0 ? 'red' : 'white'}}>
+                        {result}
+                    </h3>
+                )}
+            </StyledResult>
         </StyledDiv>
     );
 }
